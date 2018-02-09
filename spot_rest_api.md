@@ -111,3 +111,112 @@ bids :买方深度
 | :-----    | :-----   | :-----    | :-----   |
 |symbol|String|是|币对如ltc_btc|
 |size|Integer|否(默认200)|value: 1-200|
+
+3. Get /api/v1/trades   获取OKEx币币交易信息(600条)
+
+URL `https://www.okex.com/api/v1/trades.do`	
+
+示例	
+
+```
+# Request
+GET https://www.okex.com/api/v1/trades.do?symbol=ltc_btc&since=7622718804
+# Response
+[
+	{
+        "date": "1367130137",
+		"date_ms": "1367130137000",
+		"price": 787.71,
+		"amount": 0.003,
+		"tid": "230433",
+		"type": "sell"
+	},
+	{
+        "date": "1367130137",
+		"date_ms": "1367130137000",
+		"price": 787.65,
+		"amount": 0.001,
+		"tid": "230434",
+		"type": "sell"
+	},
+	{
+		"date": "1367130137",
+		"date_ms": "1367130137000",
+		"price": 787.5,
+		"amount": 0.091,
+		"tid": "230435",
+		"type": "sell"
+	}
+]
+```
+
+返回值说明	
+
+```
+date:交易时间
+date_ms:交易时间(ms)
+price: 交易价格
+amount: 交易数量
+tid: 交易生成ID
+type: buy/sell
+```
+
+请求参数	
+
+|参数名|	参数类型|	必填|	描述|
+| :-----    | :-----   | :-----    | :-----   |
+|symbol|String|是|币对如ltc_btc|
+|since|Long|否(默认返回最近成交600条)|tid:交易记录ID(返回数据不包括当前tid值,最多返回600条数据)|
+
+4. Get /api/v1/kline    获取OKEx币币K线数据(每个周期数据条数2000左右)
+
+URL `https://www.okex.com/api/v1/kline.do`	
+
+示例	
+
+```
+# Request
+GET https://www.okex.com/api/v1/kline.do?symbol=ltc_btc&type=1min
+# Response
+[
+    [
+        1417449600000,
+        2339.11,
+        2383.15,
+        2322,
+        2369.85,
+        83850.06
+    ],
+    [
+        1417536000000,
+        2370.16,
+        2380,
+        2352,
+        2367.37,
+        17259.83
+    ]
+]
+```
+
+返回值说明	
+
+```
+[
+	1417536000000,	时间戳
+	2370.16,	开
+	2380,		高
+	2352,		低
+	2367.37,	收
+	17259.83	交易量
+]
+```
+
+请求参数	
+
+|参数名|	参数类型|	必填|	描述|
+| :-----    | :-----   | :-----    | :-----   |
+|symbol|String|是|币对如ltc_btc|
+|type|String|是|1min/3min/5min/15min/30min/1day/3day/1week/1hour/2hour/4hour/6hour/12hour|
+|size|Integer|否(默认全部获取)|指定获取数据的条数|
+|since|Long|否(默认全部获取)|时间戳，返回该时间戳以后的数据(例如1417536000000)|
+
