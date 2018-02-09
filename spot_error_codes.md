@@ -1,3 +1,5 @@
+# Error codes for spot
+
 错误代码（币币）  
 
 | 错误代码        | 详细描述    |    
