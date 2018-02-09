@@ -1,4 +1,4 @@
-# FUTURES REST API    
+# REST API for FUTURES    
 
 ## 开始使用    
 
@@ -23,7 +23,7 @@ REST访问的根URL：`https://www.okex.com/api/v1`
 
 ## API参考  
 
-#### 合约行情 API 
+### 合约行情 API 
 
 获取OKEx合约行情数据  
 
@@ -355,7 +355,7 @@ low :最低卖价
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 
-#### 合约交易 API 
+### 合约交易 API 
 
 用于OKEX快速进行合约交易
 
