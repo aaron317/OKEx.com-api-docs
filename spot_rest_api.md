@@ -27,11 +27,13 @@ REST访问的根URL：`https://www.okex.com/api/v1`
 
 获取OKEx币币行情数据  
 
-1. Get /api/v1/ticker    获取OKEx币币行情
+1. Get /api/v1/ticker    获取OKEx币币行情
 
-URL `https://www.okex.com/api/v1/ticker.do`
-示例
-```
+URL `https://www.okex.com/api/v1/ticker.do`	
+
+示例	
+
+`
 # Request
 GET https://www.okex.com/api/v1/ticker.do?symbol=ltc_btc
 # Response
@@ -46,8 +48,11 @@ GET https://www.okex.com/api/v1/ticker.do?symbol=ltc_btc
 		"vol":"10532696.39199642"
 	}
 }
-```
-返回值说明
+`
+
+返回值说明	
+
+`
 date: 返回数据时服务器时间
 buy: 买一价
 high: 最高价
@@ -55,3 +60,10 @@ last: 最新成交价
 low: 最低价
 sell: 卖一价
 vol: 成交量(最近的24小时)
+`
+
+请求参数	
+
+|参数名|	参数类型|	必填|	描述|
+|symbol|String|是|币对如ltc_btc|
+
