@@ -63,10 +63,10 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
 
 	amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&symbol=btc_cny&type=buy&secret_key=secretKey    
 
-注意，''' &secret\_key=secretKey '''为签名必传参数。   
+注意，```&secret\_key=secretKey```为签名必传参数。   
 
-最后，是利用32位MD5算法，对最终待签名字符串进行签名运算，从而得到签名结果字符串(该字符串赋值于参数sign)，MD5计算结果中字母全部大写。    
-     
+最后，是利用32位MD5算法，对最终待签名字符串进行签名运算，从而得到签名结果字符串(该字符串赋值于参数sign)，MD5计算结果中字母全部大写。    `
+
 ## 更新日志    
 2017年11月06日更新    
 - 比特币现金简写BCC变更为BCH。    
