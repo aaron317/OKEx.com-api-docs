@@ -1,4 +1,4 @@
-# SPOT REST API    
+# REST API for SPOT    
 
 ## 开始使用    
 
@@ -586,13 +586,7 @@ result:true表示请求成功
 | :-----    | :-----   | :-----    | :-----   |
 |api_key|String|是|用户申请的apiKey|
 |symbol|String|是|币对如ltc_usd|
-|chargefee|Double|是|网络手续费 >=0
-BTC范围 \[0.002，0.005]
-LTC范围 \[0.001，0.2]
-ETH范围 \[0.01]
-ETC范围 \[0.0001，0.2]
-BCH范围 \[0.0005，0.002]
-手续费越高，网络确认越快，向OKCoin提币设置为0|
+|chargefee|Double|是|网络手续费 >=0 BTC范围 \[0.002，0.005] LTC范围 \[0.001，0.2] ETH范围 \[0.01] ETC范围 \[0.0001，0.2] BCH范围 \[0.0005，0.002] 手续费越高，网络确认越快，向OKCoin提币设置为0|
 |trade_pwd|String|是|交易密码|
 |withdraw_address|String|是|认证的地址、邮箱或手机号码|
 |withdraw_amount|Double|是|提币数量 BTC>=0.01 LTC>=0.1 ETH>=0.1 ETC>=0.1 BCH>=0.1|
