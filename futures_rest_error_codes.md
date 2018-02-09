@@ -1,6 +1,6 @@
-# Error codes for futures
+# Error codes for futures rest api
 
-错误代码（合约）  
+错误代码（合约 REST API）  
 
 | 错误代码        | 详细描述    |
 | :-----    | :-----   |
