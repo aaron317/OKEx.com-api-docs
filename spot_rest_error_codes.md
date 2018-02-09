@@ -1,6 +1,6 @@
-# Error codes for spot
+# Error codes for spot rest api
 
-错误代码（币币）  
+错误代码（币币 REST API）  
 
 | 错误代码        | 详细描述    |    
 | :-----    | :-----   |    
