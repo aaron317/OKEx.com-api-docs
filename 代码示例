@@ -1,0 +1,17 @@
+# 代码示例    
+
+## REST API    
+
+OKEx提供API使用的示例程序，目前支持C#、C++、JAVA、PHP、Python版本。其他语言版本会相继支持。
+用户编程使用API时，必须要支持SNI，否则可能出现连接失败。所有示例均支持SNI。 
+
+SNI（Server Name Indication)，是一项用于改善SSL/TLS的技术，在SSLv3/TLSv1中被启用。
+它允许客户端在发起SSL握手请求时（具体说来，是客户端发出SSL请求中的ClientHello阶段），就提交请求的Host信息，使得服务器能够切换到正确的域并返回相应的证书。   
+
+示例下载：https://github.com/OKCoin/rest
+
+## WebSocket API    
+
+OKEx提供WebSocket使用的示例代码，目前支持C#、C++、HTML、JAVA、Python 版本。其他语言版本会相继支持。    
+
+示例下载：https://github.com/OKCoin/websocket
