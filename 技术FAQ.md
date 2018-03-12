@@ -9,7 +9,7 @@
 答：请检查接口所需参数是否正确无误提交给服务器，然后检查请求头信息contentType是否被设置成'application/x-www-form-urlencoded'
 
 3. 服务器返回10006错误码    
-答：请检查请求域名，OKEx用户请访问www.okex.com ，国际站用户请访问www.okcoin.com 。      
+答：请检查请求域名，OKEx用户请访问[www.okex.com]\，国际站用户请访问www.okcoin.com 。      
     
 ## WebSocket API    
 
