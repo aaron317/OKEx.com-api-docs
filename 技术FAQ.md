@@ -16,5 +16,5 @@
 1. 如何判断服务端和客户端连接是否正常连接？     
 答：OKEX通过心跳机制解决这个问题。客户端发送的心跳数据：{'event':'ping'}，服务器会响应客户端：{"event":"pong"}以此来表明客户端和服务端保持正常连接。如果客户端未接到服务端响应的心跳数据则需要客户端重新建立连接。
 
-2. 如何请求OKEx站与国际站的数据？
+2. 如何请求OKEx站与国际站的数据？    
 答：OKEX api地址为:[wss://real.okex.com:10440/websocket/okexapi](wss://real.okex.com:10440/websocket/okexapi)，国际站api地址为:[wss://real.okcoin.com:10440/websocket/okcoinapi](wss://real.okcoin.com:10440/websocket/okcoinapi)。
