@@ -8,7 +8,7 @@ REST , a.k.a Respresntational State Transfer, is one of the most common web serv
 - Act as a representation of resources between client and server;
 - Client-end is enabled to operate server-side resources with 4 HTTP requests representational state transfer.   
 
-We recommend developers to use REST API to proceed spot trading and withdrawals.
+We recommend developers to use REST API to proceed Contracts trading and withdrawals.
 
 In case of any problem, please contact our support team.    
     
@@ -514,7 +514,7 @@ Request Parameters
 |amount|order quantity|
 |type| 1: open long position    2: open short position    3:liquidate long position    4: liquidate short position|
 |match_price|match best counter party price (BBO)? 0: No    1: Yes   If yes, the 'price' field is ignored|
-|lever_rate|leverage rate value: 10 or 20 (10 by default)|
+|lever_rate|Leverage settings have to be adjusted on the trading page before creating an order. If you currently have 10x open order(s) or holding position(s), you cannot create a new 20x order.|
 
 4. POST /api/v1/future_trades_history    Get OKEX Contract Trade History (Not for Personal)
 
@@ -606,7 +606,7 @@ Request Parameters
 |contract\_type|this\_week   next\_week   quarter|
 |order\_data|JSON string example: [{price:5,amount:2,type:1,match\_price:1},{price:2,amount:3,type:1,match\_price:1}]. Max 5 orders per request. For 'price', 'amount', 'type' and 'match\_price' parameters, refer to future\_trade/API|
 |sign|signature of request parameters|
-|lever_rate|leverage rate value: 10 or 20 (10 by default)|
+|lever_rate|Leverage settings have to be adjusted on the trading page before creating an order. If you currently have 10x open order(s) or holding position(s), you cannot create a new 20x order.|
 
 6. POST /api/v1/future_cancel   Cancel Orders
 
