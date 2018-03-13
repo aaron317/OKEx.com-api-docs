@@ -509,7 +509,7 @@ result ： true代表成功返回
 |amount|String|是|委托数量|
 |type|String|是|1:开多 2:开空 3:平多 4:平空|
 |match_price|String|否|是否为对手价 0:不是    1:是   ,当取值为1时,price无效|
-|lever_rate|String|否|杠杆倍数 value:10\20 默认10|
+|lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
 
 4. POST /api/v1/future_trades_history    获取OKEX合约交易历史（非个人）
 
@@ -601,7 +601,7 @@ order_id:订单ID
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 |order_data|String|是|JSON类型的字符串 例：[{price:5,amount:2,type:1,match\_price:1},{price:2,amount:3,type:1,match\_price:1}] 最大下单量为5，price,amount,type,match\_price参数参考future_trade接口中的说明|
 |sign|String|是|请求参数的签名|
-|lever_rate|String|否|杠杆倍数 value:10\20 默认10|
+|lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
 
 6. POST /api/v1/future_cancel   取消合约订单
 
