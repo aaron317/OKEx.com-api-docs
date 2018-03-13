@@ -8,7 +8,7 @@ REST , a.k.a Respresntational State Transfer, is one of the most common web serv
 - Act as a representation of resources between client and server;
 - Client-end is enabled to operate server-side resources with 4 HTTP requests representational state transfer.   
 
-We recommend developers to use REST API to proceed spot trading and withdrawals.
+We recommend developers to use REST API to proceed Contracts trading and withdrawals.
 
 In case of any problem, please contact our support team.    
     
