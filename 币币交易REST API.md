@@ -557,7 +557,7 @@ result:true代表成功返回
 |page_length|Integer|是|每页数据条数，最多不超过200|
 |sign|String|是|请求参数的签名|
 
-8. POST /api/v1/withdraw   提币BTC/LTC/ETH/ETC/BCH
+8. POST /api/v1/withdraw  	 提币BTC/LTC/ETH/ETC/BCH
 
 URL `https://www.okex.com/api/v1/withdraw.do`	
 
