@@ -90,7 +90,7 @@ sell(double): 卖一价
 timestamp(long)：时间戳
 vol(double): 成交量(最近的24小时)
 ```
-
+	
 
 2. ok_sub_spot_X_depth   订阅币币市场深度(200增量数据返回)
 
