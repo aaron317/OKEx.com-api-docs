@@ -47,3 +47,201 @@ OKEx通过心跳机制解决这个问题。客户端每30秒发送一次心跳�
 
 获取OKEx币币行情数据  
 
+1. ok_sub_spot_X_ticker    订阅行情数据
+
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_ticker'}");`	
+
+X值为币对，如ltc_btc
+
+示例	
+
+```
+# Request
+{'event':'addChannel','channel':'ok_sub_spot_bch_btc_ticker'}
+# Response
+[
+    {
+        "binary": 0,
+        "channel": "ok_sub_spot_bch_btc_ticker",
+        "data": {
+            "high": "10000",
+            "vol": "185.03743858",
+            "last": "111",
+            "low": "0.00000001",
+            "buy": "115",
+            "change": "101",
+            "sell": "115",
+            "dayLow": "0.00000001",
+            "dayHigh": "10000",
+            "timestamp": 1500444626000
+        }
+    }
+]
+```
+
+返回值说明	
+
+```
+buy(double): 买一价
+high(double): 最高价
+last(double): 最新成交价
+low(double): 最低价
+sell(double): 卖一价
+timestamp(long)：时间戳
+vol(double): 成交量(最近的24小时)
+```
+
+2. ok_sub_spot_X_depth   订阅币币市场深度(200增量数据返回)
+
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_depth'}");`	
+
+X值为币对，如ltc_btc
+
+示例	
+
+```
+# Request
+{'event':'addChannel','channel':'ok_sub_spot_bch_btc_depth'}
+# Response
+[
+    {
+        "binary": 0,
+        "channel": "ok_sub_spot_bch_btc_depth",
+        "data": {
+            "asks": [],
+            "bids": [
+                [
+                    "115",
+                    "1"
+                ],
+                [
+                    "114",
+                    "1"
+                ],
+                [
+                    "1E-8",
+                    "0.0008792"
+                ]
+            ],
+            "timestamp": 1504529236946
+        }
+    }
+]
+```
+
+返回值说明	
+
+```
+bids([string, string]):买方深度
+asks([string, string]):卖方深度
+timestamp(string):服务器时间戳
+```
+
+使用描述    
+
+第一次返回全量数据，根据接下来数据对第一次返回数据进行如下操作：删除（量为0时）；修改（价格相同量不同）；增加（价格不存在）。		
+
+3. ok_sub_spot_X_depth_Y   订阅市场深度
+
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_depth_Y'}");`	
+
+X值为币对，如ltc_btc		
+Y值为获取深度条数，如5，10，20		
+
+示例	
+
+```
+# Request
+{'event':'addChannel','channel':'ok_sub_spot_bch_btc_depth_5'}
+# Response
+[
+    {
+        "binary": 0,
+        "channel": "ok_sub_spot_bch_btc_depth_5",
+        "data": {
+            "asks": [],
+            "bids": [
+                [
+                    "115",
+                    "1"
+                ],
+                [
+                    "114",
+                    "1"
+                ],
+                [
+                    "1E-8",
+                    "0.0008792"
+                ]
+            ],
+            "timestamp": 1504529432367
+        }
+    }
+]
+```
+
+返回值说明	
+
+```
+bids([string, string]):买方深度
+asks([string, string]):卖方深度
+timestamp(long):服务器时间戳
+```
+
+4. ok_sub_spot_X_deals   订阅成交记录
+
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_deals'}");`	
+
+X值为币对，如ltc_btc				
+
+示例	
+
+```
+# Request
+{'event':'addChannel','channel':'ok_sub_spot_bch_btc_deals'}
+# Response
+[{
+    "channel":"ok_sub_spot_bch_btc_deals",
+    "data":[["1001","2463.86","0.052","16:34:07","ask"]]
+}]
+```
+
+返回值说明	
+
+```
+增量数据返回
+[交易序号, 价格, 成交量, 时间, 买卖类型]
+[string, string, string, string, string]
+```
+
+5. ok_sub_spot_X_kline_Y    订阅K线数据
+
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_kline_Y'}");`	
+
+X值为币对，如ltc_btc		
+Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, day, 3day, week				
+
+示例	
+
+```
+# Request
+{'event':'addChannel','channel':'ok_sub_spot_bch_btc_kline_1min'}
+# Response
+[{
+    "channel":"ok_sub_spot_bch_btc_kline_1min",
+    "data":[
+        ["1490337840000","995.37","996.75","995.36","996.75","9.112"],
+        ["1490337840000","995.37","996.75","995.36","996.75","9.112"]
+    ]
+}]
+```
+
+返回值说明	
+
+```
+[时间,开盘价,最高价,最低价,收盘价,成交量]
+[string, string, string, string, string, string]
+```
+
+
+
