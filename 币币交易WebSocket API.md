@@ -243,5 +243,134 @@ Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour
 [string, string, string, string, string, string]
 ```
 
+### 币币交易 API 
+
+获取OKEx币币交易数据  
+
+1. login    登录事件(个人信息推送)
+
+示例	
+
+```
+# Request
+{"event":"login","parameters":{"api_key":"xxx","sign":"xxx"}}
+# Response
+[
+    {
+        "binary": 0,
+        "channel": "login",
+        "data": {
+            "result": true
+        }
+    }
+]
+```
+
+请求参数	
+
+|参数名|	描述|
+| :-----    | :-----   |
+|api_key|用户申请的APIKEY|
+|sign|请求参数的签名|
+
+说明    	
+
+订阅login后还需要订阅 ok_sub_spot_X_order 交易数据接口，和ok_sub_spot_X_balance账户信息接口。		
+
+2. ok_sub_spot_X_order   交易数据
+
+示例	
+
+```
+# Response
+[
+    {
+        "base": "bch",
+        "binary": 0,
+        "channel": "ok_sub_spot_bch_btc_order",
+        "data": {
+            "symbol": "bch_btc",
+            "tradeAmount": "1.00000000",
+            "createdDate": "1504530228987",
+            "orderId": 6191,
+            "completedTradeAmount": "0.00000000",
+            "averagePrice": "0",
+            "tradePrice": "0.00000000",
+            "tradeType": "buy",
+            "status": 0,
+            "tradeUnitPrice": "113.00000000"
+        },
+        "product": "spot",
+        "quote": "btc",
+        "type": "balance"
+    }
+]
+```
+
+返回值说明	
+
+```
+createdDate(string):创建日期
+orderId(long):订单id
+tradeType(string):交易类型（buy:买入；sell:卖出；buy_market:按市价买入；sell_market:按市价卖出）
+sigTradeAmount(string):单笔成交数量
+sigTradePrice(string):单笔成交价格
+tradeAmount(string):委托数量（市价卖代表要卖总数量；限价单代表委托数量）
+tradeUnitPrice(string):委托价格（市价买单代表购买总金额； 限价单代表委托价格）
+symbol(string):交易币对，如ltc_btc
+completedTradeAmount(string):已完成成交量
+tradePrice(string):成交金额
+averagePrice(string):平均成交价
+unTrade(string):当按市场价买币时表示剩余金额，其他情况表示此笔交易剩余买/卖币的数量
+status(int):-1已撤销,0等待成交,1部分成交,2完全成交,4撤单处理中
+```
+
+请求参数	
+
+|参数名|	描述|
+| :-----    | :-----   |
+|symbol|交易币对，如ltc_btc|	
+
+3. ok_sub_spot_X_balance   账户信息		
+
+示例	
+
+```
+# Response
+[
+    {
+        "base": "bch",
+        "binary": 0,
+        "channel": "ok_sub_spot_bch_btc_balance",
+        "data": {
+            "info": {
+                "free": {
+                    "btc": 5814.850605790395
+                },
+                "freezed": {
+                    "btc": 7341
+                }
+            }
+        },
+        "product": "spot",
+        "quote": "btc",
+        "type": "order"
+    }
+]
+```
+
+返回值说明	
+
+```
+free:账户余额
+freezed:账户冻结余额
+```
+
+请求参数	
+
+|参数名|	描述|
+| :-----    | :-----   |
+|symbol|交易币对，如ltc_btc|	
+
 
 
