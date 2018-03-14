@@ -91,6 +91,7 @@ timestamp(long)：时间戳
 vol(double): 成交量(最近的24小时)
 ```
 
+
 2. ok_sub_spot_X_depth   订阅币币市场深度(200增量数据返回)
 
 `websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_depth'}");`	
@@ -141,11 +142,13 @@ timestamp(string):服务器时间戳
 
 第一次返回全量数据，根据接下来数据对第一次返回数据进行如下操作：删除（量为0时）；修改（价格相同量不同）；增加（价格不存在）。		
 
+
 3. ok_sub_spot_X_depth_Y   订阅市场深度
 
 `websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_depth_Y'}");`	
 
-X值为币对，如ltc_btc			
+X值为币对，如ltc_btc	
+
 Y值为获取深度条数，如5，10，20		
 
 示例	
@@ -188,6 +191,7 @@ asks([string, string]):卖方深度
 timestamp(long):服务器时间戳
 ```
 
+
 4. ok_sub_spot_X_deals   订阅成交记录
 
 `websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_deals'}");`	
@@ -214,11 +218,13 @@ X值为币对，如ltc_btc
 [string, string, string, string, string]
 ```
 
+
 5. ok_sub_spot_X_kline_Y    订阅K线数据
 
 `websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_kline_Y'}");`	
 
-X值为币对，如ltc_btc			
+X值为币对，如ltc_btc	
+
 Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, day, 3day, week				
 
 示例	
@@ -242,6 +248,7 @@ Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour
 [时间,开盘价,最高价,最低价,收盘价,成交量]
 [string, string, string, string, string, string]
 ```
+
 
 ### 币币交易 API 
 
@@ -275,7 +282,8 @@ Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour
 
 说明    	
 
-订阅login后还需要订阅 ok_sub_spot_X_order 交易数据接口，和ok_sub_spot_X_balance账户信息接口。		
+订阅login后还需要订阅 ok_sub_spot_X_order 交易数据接口，和ok_sub_spot_X_balance账户信息接口。	
+
 
 2. ok_sub_spot_X_order   交易数据
 
@@ -330,6 +338,7 @@ status(int):-1已撤销,0等待成交,1部分成交,2完全成交,4撤单处理�
 |参数名|	描述|
 | :-----    | :-----   |
 |symbol|交易币对，如ltc_btc|	
+
 
 3. ok_sub_spot_X_balance   账户信息		
 
