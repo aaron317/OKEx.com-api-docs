@@ -145,7 +145,7 @@ timestamp(string):服务器时间戳
 
 `websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_depth_Y'}");`	
 
-X值为币对，如ltc_btc		
+X值为币对，如ltc_btc			
 Y值为获取深度条数，如5，10，20		
 
 示例	
@@ -218,7 +218,7 @@ X值为币对，如ltc_btc
 
 `websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_kline_Y'}");`	
 
-X值为币对，如ltc_btc		
+X值为币对，如ltc_btc			
 Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour, 6hour, 12hour, day, 3day, week				
 
 示例	
