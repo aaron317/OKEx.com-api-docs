@@ -1012,7 +1012,7 @@ type：交易类型 1：买入开多 2：卖出开空 3：卖出平多 4：买�
 |sign|String|是|请求参数的签名|
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
-|status|String|否|查询状态 1:未完成的订单 2:已经完成的订单|
+|status|String|是|状态 0：最近7天未成交 1:最近7天已成交|
 |current\_page|Integer|否|当前页数索引值|
 |page_number|Integer|否|当前页数(使用page\_number时current\_page失效，current\_page无需传)|
 |page_length|Integer|否|每页获取条数，最多不超过50|
