@@ -20,10 +20,10 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
 event: addChannel(注册请求数据)/removeChannel(注销请求数据)   
 channel: OKEx提供请求数据类型   
 parameters: 参数为选填参数，其中api_key为用户申请的APIKEY，sign为签名字符串，签名规则参照请求说明   
-binary: 参数为选填参数，是否为压缩数据。1 压缩数据；0 原始数据；默认0     
+    
 
 例如： 
-`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker','binary','1'}")`  
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker' }")`  
 `websocket.send("[{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker'},{'event':'addChannel','channel':'ok_sub_spot_usd_btc_depth'},{'event':'addChannel','channel':'ok_sub_spot_usd_btc_trades'}]")`,支持批量注册 
 
 #### 服务器响应    
@@ -61,7 +61,6 @@ X值为币对，如ltc_btc
 # Response
 [
     {
-        "binary": 0,
         "channel": "ok_sub_spot_bch_btc_ticker",
         "data": {
             "high": "10000",
@@ -105,7 +104,6 @@ X值为币对，如ltc_btc
 # Response
 [
     {
-        "binary": 0,
         "channel": "ok_sub_spot_bch_btc_depth",
         "data": {
             "asks": [],
@@ -158,7 +156,6 @@ Y值为获取深度条数，如5，10，20
 # Response
 [
     {
-        "binary": 0,
         "channel": "ok_sub_spot_bch_btc_depth_5",
         "data": {
             "asks": [],
@@ -263,7 +260,6 @@ Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour
 # Response
 [
     {
-        "binary": 0,
         "channel": "login",
         "data": {
             "result": true
@@ -293,7 +289,6 @@ Y值为K线时间周期，如1min, 3min, 5min, 15min, 30min, 1hour, 2hour, 4hour
 [
     {
         "base": "bch",
-        "binary": 0,
         "channel": "ok_sub_spot_bch_btc_order",
         "data": {
             "symbol": "bch_btc",
@@ -348,7 +343,6 @@ status(int):-1已撤销,0等待成交,1部分成交,2完全成交,4撤单处理�
 [
     {
         "base": "bch",
-        "binary": 0,
         "channel": "ok_sub_spot_bch_btc_balance",
         "data": {
             "info": {
