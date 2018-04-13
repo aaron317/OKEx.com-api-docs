@@ -20,11 +20,11 @@ Request Data Format:
 
 {'event':'addChannel','channel':'channelValue','parameters':{'api\_key':'value1','sign':'value2'}}.   
 Note: 'event':'addChannel'(register request)/'removeChannel'(unregister request)
-'channel': OKEX provided data type. 
+'channel': OKEX provided data type    
 'parameters': optional field 
-binary optional field，compression value: 1 compression data ,0 decompression data default 0 'api\_key' and 'secret\_key' is apply 'apiKey' and 'secretKey' for users.
+'api\_key' and 'secret\_key' is apply 'apiKey' and 'secretKey' for users    
 Example:
-websocket.send("{'event':'addChannel','channel':'ok\_btcusd\_ticker','binary':'1' }")
+websocket.send("{'event':'addChannel','channel':'ok\_btcusd\_ticker' }")
 websocket.send("[{'event':'addChannel','channel':'ok\_btcusd\_ticker'},{'event':'addChannel','channel':'ok\_btcusd\_depth'},{'event':'addChannel','channel':'ok\_btcusd\_trades'}]"); Support batch register 
 
    
@@ -360,7 +360,6 @@ Example
 # Response
 [
     {
-        "binary": 0,
         "channel": "login",
         "data": {
             "result": true
