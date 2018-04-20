@@ -20,10 +20,10 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
 event: addChannel(注册请求数据)/removeChannel(注销请求数据)   
 channel: OKEx提供请求数据类型   
 parameters: 参数为选填参数，其中api_key为用户申请的APIKEY，sign为签名字符串，签名规则参照请求说明   
-binary: 参数为选填参数，是否为压缩数据。1 压缩数据；0 原始数据；默认0     
+    
 
 例如： 
-`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker','binary','1'}")`  
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker'}")`  
 `websocket.send("[{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker'},{'event':'addChannel','channel':'ok_sub_spot_usd_btc_depth'},{'event':'addChannel','channel':'ok_sub_spot_usd_btc_trades'}]")`,支持批量注册 
 
 #### 服务器响应    
@@ -361,7 +361,6 @@ timestamp(string): 时间戳
 # Response
 [
     {
-        "binary": 0,
         "channel": "login",
         "data": {
             "result": true
