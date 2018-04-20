@@ -475,8 +475,7 @@ force_liqu_price:预估爆仓价
 
 3. POST /api/v1/future_trade   合约下单
 
-URL `https://www.okex.com/api/v1/future_trade.do`  访问频率 20次/2秒 
-访问频率5次/秒	
+URL `https://www.okex.com/api/v1/future_trade.do`  访问频率 20次/2秒 	
 
 示例	
 
@@ -561,8 +560,7 @@ type：交易类型（buy/sell）
 
 5. POST /api/v1/future\_batch_trade   批量下单
 
-URL `https://www.okex.com/api/v1/future_batch_trade.do`  访问频率 10次/2秒 
-访问频率5次/秒	
+URL `https://www.okex.com/api/v1/future_batch_trade.do`  访问频率 10次/2秒 	
 
 示例	
 
@@ -605,8 +603,7 @@ order_id:订单ID
 
 6. POST /api/v1/future_cancel   取消合约订单
 
-URL `https://www.okex.com/api/v1/future_cancel.do`  访问频率 4次/2秒 
-访问频率10次/秒	
+URL `https://www.okex.com/api/v1/future_cancel.do`  访问频率 4次/2秒 	
 
 示例	
 
@@ -804,7 +801,6 @@ lever_rate: 杠杆倍数  value:10\20  默认10
 
 URL `https://www.okex.com/api/v1/future_userinfo_4fix.do`  
 
-
 示例	
 
 ```
@@ -871,6 +867,7 @@ rights:账户权益
 10. POST /api/v1/future\_position\_4fix   逐仓用户持仓查询
 
 URL `https://www.okex.com/api/v1/future_position_4fix.do`  访问频率 10次/2秒 
+
 示例	
 
 ```
