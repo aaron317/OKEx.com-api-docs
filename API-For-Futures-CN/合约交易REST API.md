@@ -248,7 +248,7 @@ URL `https://www.okex.com/api/v1/future_kline.do`
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_depth.do
+GET https://www.okex.com/api/v1/future_kline.do
 # Response
 [
     [
@@ -361,7 +361,7 @@ low :最低卖价
 
 1. POST /api/v1/future_userinfo   获取OKEx合约账户信息(全仓)
 
-URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率 10次/2秒	
+URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率 10次/2秒  
 
 示例	
 
@@ -410,7 +410,7 @@ risk_rate：保证金率
 
 2. POST /api/v1/future_position   获取用户持仓获取OKEX合约账户信息 （全仓）
 
-URL `https://www.okex.com/api/v1/future_position.do`	
+URL `https://www.okex.com/api/v1/future_position.do`  访问频率 10次/2秒 
 
 示例	
 
@@ -475,7 +475,7 @@ force_liqu_price:预估爆仓价
 
 3. POST /api/v1/future_trade   合约下单
 
-URL `https://www.okex.com/api/v1/future_trade.do`  
+URL `https://www.okex.com/api/v1/future_trade.do`  访问频率 20次/2秒 
 访问频率5次/秒	
 
 示例	
@@ -511,9 +511,9 @@ result ： true代表成功返回
 |match_price|String|否|是否为对手价 0:不是    1:是   ,当取值为1时,price无效|
 |lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
 
-4. POST /api/v1/future_trades_history    获取OKEX合约交易历史（非个人）
+4. POST /api/v1/future_trades_history    获取OKEX合约交易历史（非个人）访问频率 
 
-URL `https://www.okex.com/api/v1/future_trades_history` 
+URL `https://www.okex.com/api/v1/future_trades_history`   访问频率 2次/2秒 
 
 示例	
 
@@ -561,7 +561,7 @@ type：交易类型（buy/sell）
 
 5. POST /api/v1/future\_batch_trade   批量下单
 
-URL `https://www.okex.com/api/v1/future_batch_trade.do`  
+URL `https://www.okex.com/api/v1/future_batch_trade.do`  访问频率 10次/2秒 
 访问频率5次/秒	
 
 示例	
@@ -599,13 +599,13 @@ order_id:订单ID
 |api_key|String|是|用户申请的apiKey|
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
-|order_data|String|是|JSON类型的字符串 例：[{price:5,amount:2,type:1,match\_price:1},{price:2,amount:3,type:1,match\_price:1}] 最大下单量为5，price,amount,type,match\_price参数参考future_trade接口中的说明|
+|orders_data|String|是|JSON类型的字符串 例：[{price:5,amount:2,type:1,match\_price:1},{price:2,amount:3,type:1,match\_price:1}] 最大下单量为5，price,amount,type,match\_price参数参考future_trade接口中的说明|
 |sign|String|是|请求参数的签名|
 |lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
 
 6. POST /api/v1/future_cancel   取消合约订单
 
-URL `https://www.okex.com/api/v1/future_cancel.do`  
+URL `https://www.okex.com/api/v1/future_cancel.do`  访问频率 4次/2秒 
 访问频率10次/秒	
 
 示例	
@@ -870,7 +870,7 @@ rights:账户权益
 
 10. POST /api/v1/future\_position\_4fix   逐仓用户持仓查询
 
-URL `https://www.okex.com/api/v1/future_position_4fix.do`  
+URL `https://www.okex.com/api/v1/future_position_4fix.do`  访问频率 10次/2秒 
 示例	
 
 ```
