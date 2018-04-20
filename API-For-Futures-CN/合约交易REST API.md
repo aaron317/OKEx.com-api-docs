@@ -361,7 +361,7 @@ low :最低卖价
 
 1. POST /api/v1/future_userinfo   获取OKEx合约账户信息(全仓)
 
-URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率10次/2秒	
+URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率 10次/2秒	
 
 示例	
 
