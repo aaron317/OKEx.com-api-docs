@@ -604,7 +604,7 @@ Request Parameters
 |api_key|apiKey of the user|
 |symbol|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 |contract\_type|this\_week   next\_week   quarter|
-|order\_data|JSON string example: [{price:5,amount:2,type:1,match\_price:1},{price:2,amount:3,type:1,match\_price:1}]. Max 5 orders per request. For 'price', 'amount', 'type' and 'match\_price' parameters, refer to future\_trade/API|
+|orders\_data|JSON string example: [{price:5,amount:2,type:1,match\_price:1},{price:2,amount:3,type:1,match\_price:1}]. Max 5 orders per request. For 'price', 'amount', 'type' and 'match\_price' parameters, refer to future\_trade/API|
 |sign|signature of request parameters|
 |lever_rate|Leverage settings have to be adjusted on the trading page before creating an order. If you currently have 10x open order(s) or holding position(s), you cannot create a new 20x order.|
 
