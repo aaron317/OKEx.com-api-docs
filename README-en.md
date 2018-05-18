@@ -53,15 +53,15 @@ First, the string to be signed is ordered according to the parameter name (first
 
 For example: sign the following parameters
 
-String[] parameters={"api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c","symbol=btc_cny","type=buy","price=680","amount=1.0"};
+String[] parameters={"api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c","symbol=btc_usdt","type=buy","price=680","amount=1.0"};
 
 Generate a string to be signed
 
-Amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&symbol=btc_cny&type=buy
+Amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&symbol=btc_usdt&type=buy
 
 Then, the character to be signed is added with the private key parameter to generate the final to-be-signed character string. E.g:
 
-Amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&symbol=btc_cny&type=buy&secret_key=secretKey
+Amount=1.0&api_key=c821db84-6fbd-11e4-a9e3-c86000d26d7c&price=680&symbol=btc_usdt&type=buy&secret_key=secretKey
 
 Note that `&secret\_key=secretKey` is a mandatory parameter for the signature.
 
