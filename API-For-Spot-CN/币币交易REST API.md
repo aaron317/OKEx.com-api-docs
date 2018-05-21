@@ -724,3 +724,42 @@ status: 记录状态,如果查询充值记录:(-1:充值失败;0:等待确认;1:
 |current_page|Integer|是|当前页数|
 |page_length|Integer|是|每页数据条数，最多不超过50|
 |sign|String|是|请求参数的签名|
+
+12. POST /api/v1/funds_transfer.do    资金划转
+
+URL `https://www.okex.com/api/v1/funds_transfer.do`	
+
+示例	
+
+```
+# Request
+POST https://www.okex.com/api/v1/funds_transfer.do
+# Response
+{
+    "result":true
+}
+或
+{
+    "error_code":20029,
+    "result":false
+}
+```
+
+返回值说明	
+
+```
+result:划转结果。若是划转失败，将给出错误码提示。
+```
+
+请求参数	
+
+|参数名|	参数类型|	必填|	描述|
+| :-----    | :-----   | :-----    | :-----   |
+|api_key|String|是|用户申请的apiKey|
+|symbol|String|是|btc_usd ltc_usd eth_usd etc_usd bch_usd|
+|amount|Number|是|划转数量|
+|from|Number|是|转出账户(1：币币账户 3：合约账户 6：我的钱包)|
+|to|Number|是|转入账户(1：币币账户 3：合约账户 6：我的钱包)|
+|sign|String|是|请求参数的签名|
+
+
