@@ -733,3 +733,41 @@ Request Parameters
 |current_page|current page number|
 |page_length|data entries number per page, maximum 50|
 |sign|signature of request parameters|
+
+12. POST /api/v1/funds_transfer.do    Funds transfer
+
+URL `https://www.okex.com/api/v1/funds_transfer.do`	
+
+Example	
+
+```
+# Request
+POST https://www.okex.com/api/v1/funds_transfer.do
+# Response
+{
+    "result":true
+}
+or
+{
+    "error_code":20029,
+    "result":false
+}
+```
+
+Return Values	
+
+```
+result:true for success, false for error
+```
+
+Request Parameters	
+
+|Parameter|		Description|
+| :-----    | :-----   |
+|api_key|apiKey of the user|
+|symbol|Pairs like : ltc\_btc  etc\_btc|
+|amount|The amount to transfer|
+|from|Remitting Account(1:spot 3:futures 6:my wallet)|
+|to|Beneficiary Account(1:spot 3:futures 6:my wallet)|
+|sign|signature of request parameters|
+
