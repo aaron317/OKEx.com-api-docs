@@ -762,7 +762,7 @@ result:划转结果。若是划转失败，将给出错误码提示。
 |to|Number|是|转入账户(1：币币账户 3：合约账户 6：我的钱包)|
 |sign|String|是|请求参数的签名|
 	
-13. POST /api/v1/wallet_info    获取用户信息
+13. POST /api/v1/wallet_info    获取用户钱包账户信息
 
 URL `https://www.okex.com/api/v1/wallet_info.do`	访问频率 6次/2秒    
 
