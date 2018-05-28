@@ -761,5 +761,49 @@ result:划转结果。若是划转失败，将给出错误码提示。
 |from|Number|是|转出账户(1：币币账户 3：合约账户 6：我的钱包)|
 |to|Number|是|转入账户(1：币币账户 3：合约账户 6：我的钱包)|
 |sign|String|是|请求参数的签名|
+	
+13. POST /api/v1/wallet_info    获取用户信息
 
+URL `https://www.okex.com/api/v1/wallet_info.do`	访问频率 6次/2秒    
+
+示例	
+
+```
+# Request
+POST https://www.okex.com/api/v1/wallet_info.do
+# Response
+{
+    "info": {
+        "funds": {
+            "free": {
+                "btc": "0",
+                "usd": "0",
+                "ltc": "0",
+                "eth": "0"
+            },
+            "freezed": {
+                "btc": "0",
+                "usd": "0",
+                "ltc": "0",
+                "eth": "0"
+            }
+        }
+    },
+    "result": true
+}
+```
+
+返回值说明	
+
+```
+free:账户余额
+freezed:账户冻结余额
+```
+
+请求参数	
+
+|参数名|	参数类型|	必填|	描述|
+| :-----    | :-----   | :-----    | :-----   |
+|api_key|String|是|用户申请的apiKey|
+|sign|String|是|请求参数的签名|
 
