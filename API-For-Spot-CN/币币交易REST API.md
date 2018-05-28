@@ -725,7 +725,7 @@ status: 记录状态,如果查询充值记录:(-1:充值失败;0:等待确认;1:
 |page_length|Integer|是|每页数据条数，最多不超过50|
 |sign|String|是|请求参数的签名|
 
-12. POST /api/v1/funds_transfer.do    资金划转
+12. POST /api/v1/funds_transfer    资金划转
 
 URL `https://www.okex.com/api/v1/funds_transfer.do`	
 
