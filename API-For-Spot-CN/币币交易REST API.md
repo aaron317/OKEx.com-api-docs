@@ -777,13 +777,11 @@ POST https://www.okex.com/api/v1/wallet_info.do
         "funds": {
             "free": {
                 "btc": "0",
-                "usd": "0",
                 "ltc": "0",
                 "eth": "0"
             },
             "freezed": {
                 "btc": "0",
-                "usd": "0",
                 "ltc": "0",
                 "eth": "0"
             }
