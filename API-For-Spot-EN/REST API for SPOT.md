@@ -734,7 +734,7 @@ Request Parameters
 |page_length|data entries number per page, maximum 50|
 |sign|signature of request parameters|
 
-12. POST /api/v1/funds_transfer.do    Funds transfer
+12. POST /api/v1/funds_transfer    Funds transfer
 
 URL `https://www.okex.com/api/v1/funds_transfer.do`	
 
@@ -771,3 +771,48 @@ Request Parameters
 |to|Beneficiary Account(1:spot 3:futures 6:my wallet)|
 |sign|signature of request parameters|
 
+13. POST /api/v1/wallet_info    Get My Wallet Info
+
+URL `https://www.okex.com/api/v1/wallet_info.do`  
+	Request frequency 6 times/2s    
+
+Example	
+
+```
+# Request
+POST https://www.okex.com/api/v1/wallet_info.do
+# Response
+{
+    "info": {
+        "funds": {
+            "free": {
+                "btc": "0",
+                "usd": "0",
+                "ltc": "0",
+                "eth": "0"
+            },
+            "freezed": {
+                "btc": "0",
+                "usd": "0",
+                "ltc": "0",
+                "eth": "0"
+            }
+        }
+    },
+    "result": true
+}
+```
+
+Return Values	
+
+```
+free: available fund
+freezed: frozen fund
+```
+
+Request Parameters	
+
+|Parameter|Description|
+| :-----   | :-----   |
+|api_key|apiKey of the user|
+|sign|signature of request parameters|
