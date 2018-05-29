@@ -778,7 +778,7 @@ POST https://www.okex.com/api/v1/wallet_info.do
                 "ltc": "0",
                 "eth": "0"
             },
-            "freezed": {
+            "holds": {
                 "btc": "0",
                 "ltc": "0",
                 "eth": "0"
@@ -793,7 +793,7 @@ POST https://www.okex.com/api/v1/wallet_info.do
 
 ```
 free:账户余额
-freezed:账户冻结余额
+holds:账户锁定余额
 ```
 
 请求参数	
