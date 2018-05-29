@@ -771,18 +771,16 @@ URL `https://www.okex.com/api/v1/wallet_info.do`	访问频率 6次/2秒  
 POST https://www.okex.com/api/v1/wallet_info.do
 # Response
 {
-    "info": {
-        "funds": {
-            "free": {
-                "btc": "0",
-                "ltc": "0",
-                "eth": "0"
-            },
-            "freezed": {
-                "btc": "0",
-                "ltc": "0",
-                "eth": "0"
-            }
+    "funds": {
+        "free": {
+            "btc": "0",
+            "ltc": "0",
+            "eth": "0"
+        },
+        "freezed": {
+            "btc": "0",
+            "ltc": "0",
+            "eth": "0"
         }
     },
     "result": true
