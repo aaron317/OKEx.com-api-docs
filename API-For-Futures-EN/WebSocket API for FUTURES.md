@@ -18,9 +18,13 @@ OKEx Contract WebSocket URL：`wss://real.okex.com:10440/websocket/okexapi`
 #### Send Request    
 Request Data Format: 
 
+```
 {'event':'addChannel','channel':'channelValue','parameters':{'api\_key':'value1','sign':'value2'}}.   
+```
+
 Note: 		
 
+```
 'event':'addChannel'(register request)/'removeChannel'(unregister request)
 
 'channel': OKEX provided data type  	  
@@ -28,18 +32,21 @@ Note:
 'parameters': optional field 	
 
 'api\_key' and 'secret\_key' is apply 'apiKey' and 'secretKey' for users    	
+```
 
 Example:
 
+```
 websocket.send("{'event':'addChannel','channel':'ok\_btcusd\_ticker' }")	
 
 websocket.send("[{'event':'addChannel','channel':'ok\_btcusd\_ticker'},{'event':'addChannel','channel':'ok\_btcusd\_depth'},{'event':'addChannel','channel':'ok\_btcusd\_trades'}]"); Support batch register 
-
+```
    
 #### Server Response
 Return Data Format:
-
+```
 [{"channel":"channel","success":"","errorcode":"","data":{}},{"channel":"channel","success":"","errorcode":1,"data":{}}] 
+```
 channel: requested data type
 result: true,false(applicable to WebSocket Trade API)
 data: returned data
