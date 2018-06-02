@@ -640,7 +640,7 @@ error:失败的订单ID后跟失败错误码(用户多笔订单)
 | :-----    | :-----   | :-----    | :-----   |
 |api_key|String|是|用户申请的apiKey|
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
-|order_id|String|是|订单ID(多个订单ID中间以","分隔,一次最多允许撤消3个订单)|
+|order_id|String|是|订单ID(多个订单ID中间以","分隔,一次最多允许撤消5个订单)|
 |sign|String|是|请求参数的签名|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 
