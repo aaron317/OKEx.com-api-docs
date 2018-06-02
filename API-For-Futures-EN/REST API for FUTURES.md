@@ -638,7 +638,7 @@ Request Parameters
 | :-----    | :-----   |
 |api_key|apiKey of the user|
 |symbol|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
-|order_id|order ID (multiple orders are separated by a comma ',', Max of 3 orders are allowed per request)|
+|order_id|order ID (multiple orders are separated by a comma ',', Max of 5 orders are allowed per request)|
 |sign|signature of request parameters|
 |contract\_type|this\_week   next\_week   quarter|
 
