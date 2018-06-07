@@ -242,7 +242,7 @@ forecast_price:交割预估价  注意：交割预估价只有交割前三小时
 | :-----    | :-----   | :-----    | :-----   |
 |symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
 
-7. Get /api/v1/future_kline   获取OKEx合约深度信息
+7. Get /api/v1/future_kline   获取OKEx合约K线信息
 
 URL `https://www.okex.com/api/v1/future_kline.do`	
 
