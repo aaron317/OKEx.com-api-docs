@@ -481,7 +481,7 @@ Request Parameters
 3. POST /api/v1/future_trade   Place Orders
 
 URL `https://www.okex.com/api/v1/future_trade.do`  
-Request frequency 10 times/s(each coin has 10 times)	
+Request frequency 5 times/s(each coin has 5 times)	
 
 Example	
 
@@ -567,7 +567,7 @@ Request Parameters
 5. POST /api/v1/future\_batch_trade   Batch Trade
 
 URL `https://www.okex.com/api/v1/future_batch_trade.do`  
-Request frequency 5 times/s  (each coin has 10 times).you can place 5 orders at monst once	
+Request frequency 3 times/s  (each coin has 3 times).you can place 5 orders at monst once	
 
 Example	
 
@@ -611,7 +611,7 @@ Request Parameters
 6. POST /api/v1/future_cancel   Cancel Orders
 
 URL `https://www.okex.com/api/v1/future_cancel.do`  
-Request frequency 5 times/s  (each coin has 10 times).you can place 5 orders at monst once	
+Request frequency 2 times/s  (each coin has 2 times).you can cancel 5 orders at monst once	
 
 Example	
 
