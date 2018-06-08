@@ -198,7 +198,7 @@ timestamp(long): server timestamp
 
 4. ok\_sub\_spot\_X\_deals   Subscribe Trade Records
 
-`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_depth_Y'}");`	
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_deals'}");`	
 
 ①  value of X is: ltc\_btc eth\_btc etc\_btc bch\_btc btc\_usdt eth\_usdt ltc\_usdt etc\_usdt bch\_usdt etc\_eth bt1\_btc bt2\_btc btg\_btc qtum\_btc hsr\_btc neo\_btc gas\_btc qtum\_usdt hsr\_usdt neo\_usdt gas\_usdt  
 
