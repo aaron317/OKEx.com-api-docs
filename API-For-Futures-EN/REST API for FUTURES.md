@@ -227,7 +227,7 @@ Example
 
 ```
 # Request
-GET https://www.okex.com/api/v1/future_depth.do?symbol=btc_usd
+GET https://www.okex.com/api/v1/future_estimated_price.do?symbol=btc_usd
 # Response
 {"forecast_price":5.4}
 ```
