@@ -788,7 +788,7 @@ POST https://www.okex.com/api/v1/wallet_info.do
                 "ltc": "0",
                 "eth": "0"
             },
-            "freezed": {
+            "holds": {
                 "btc": "0",
                 "ltc": "0",
                 "eth": "0"
@@ -803,7 +803,7 @@ Return Values
 
 ```
 free: available fund
-freezed: frozen fund
+holds: frozen fund
 ```
 
 Request Parameters	
