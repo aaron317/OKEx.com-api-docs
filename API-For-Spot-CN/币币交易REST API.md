@@ -717,7 +717,7 @@ status: 记录状态,如果查询充值记录:(-1:充值失败;0:等待确认;1:
 |参数名|	参数类型|	必填|	描述|
 | :-----    | :-----   | :-----    | :-----   |
 |api_key|String|是|用户申请的apiKey|
-|symbol|String|是|币种如btc, ltc, eth, etc, bch, usdt|
+|symbol|String|是|币种如btc_usd, ltc_usd, eth_usd, etc_usd, bch_usd, usdt_usd|
 |type|Integer|是|0：充值 1 ：提现|
 |current_page|Integer|是|当前页数|
 |page_length|Integer|是|每页数据条数，最多不超过50|
