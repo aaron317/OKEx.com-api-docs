@@ -726,7 +726,7 @@ Request Parameters
 |Parameter|		Description|
 | :-----    | :-----   |
 |api_key|apiKey of the user|
-|symbol|Pairs like : ltc\_btc  etc\_btc|
+|symbol|Pairs like : ltc\_usd  etc\_usd|
 |type|0：deposits 1 ：withdraw|
 |current_page|current page number|
 |page_length|data entries number per page, maximum 50|
