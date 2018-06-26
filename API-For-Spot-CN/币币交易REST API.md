@@ -295,7 +295,7 @@ order_id:订单ID
 |symbol|String|是|币对如ltc_btc|
 |type|String|是|买卖类型：限价单(buy/sell) 市价单(buy_market/sell_market)|
 |price|Double|否|下单价格 市价卖单不传price|
-|amount|Double|否|交易数量 市价买单不传amount|
+|amount|Double|否|交易数量 市价买单不传amount,市价买单需传price作为买入总金额|
 |sign|String|是|请求参数的签名|
 
 3. POST /api/v1/batch_trade    批量下单
