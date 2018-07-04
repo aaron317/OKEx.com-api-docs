@@ -25,8 +25,8 @@ parameters: 参数为选填参数，其中api_key为用户申请的APIKEY，sign
     
 
 例如： 
-`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker' }")`  
-`websocket.send("[{'event':'addChannel','channel':'ok_sub_spot_usd_btc_ticker'},{'event':'addChannel','channel':'ok_sub_spot_usd_btc_depth'},{'event':'addChannel','channel':'ok_sub_spot_usd_btc_trades'}]")`,支持批量注册 
+`websocket.send("{'event':'addChannel','channel':'ok_sub_spot_bch_btc_ticker' }")`  
+`websocket.send("[{'event':'addChannel','channel':'ok_sub_spot_bch_btc_ticker'},{'event':'addChannel','channel':'ok_sub_spot_bch_btc_ticker'},{'event':'addChannel','channel':'ok_sub_spot_bch_btc_ticker'}]")`,支持批量注册 
 
 #### 服务器响应    
 返回数据格式为： 
