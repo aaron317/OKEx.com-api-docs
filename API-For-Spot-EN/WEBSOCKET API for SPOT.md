@@ -33,8 +33,8 @@ Note:
 
 Example:
 
-websocket.send("{'event':'addChannel','channel':'ok\_btcusd\_ticker' }").  
-websocket.send("[{'event':'addChannel','channel':'ok\_btcusd\_ticker'},{'event':'addChannel','channel':'ok\_btcusd\_depth'},{'event':'addChannel','channel':'ok\_btcusd\_trades'}]"); Support batch register 
+websocket.send("{'event':'addChannel','channel':'ok_sub_spot_X_ticker' }").  
+websocket.send("[{'event':'addChannel','channel':'ok_sub_spot_X_ticker'},{'event':'addChannel','channel':'ok_sub_spot_X_depth'},{'event':'addChannel','channel':'ok_sub_spot_X_deals'}]"); Support batch register 
 
 #### Server Response
 Return Data Format:
