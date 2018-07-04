@@ -6,7 +6,7 @@
 答：一个IP五分钟之内，最多发送3000个https请求。若超出，系统会自动封IP一个小时，一个小时后自动解除。部分接口还有针对同一APIKEY的访问频次限制，具体限制见相关接口，超出后降低访问频次即恢复。       
 
 2. 服务器返回10000错误码    
-答：请检查接口所需参数是否正确无误提交给服务器，然后检查请求头信息contentType是否被设置成'application/x-www-form-urlencoded'
+答：请检查接口所需参数是否正确无误提交给服务器，然后检查请求头信息content-type是否被设置成'application/x-www-form-urlencoded'
 
 3. 服务器返回10006错误码    
 答：请检查请求域名，OKEx用户请访问[www.okex.com](www.okex.com)，国际站用户请访问[www.okcoin.com](www.okcoin.com)。      
