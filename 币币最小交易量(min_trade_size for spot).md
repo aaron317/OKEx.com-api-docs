@@ -1,4 +1,4 @@
-|币对ID(Product\_id)|币对(Symbol)|最小交易单位(min_trade_size)|下单精度(quote_increment)|
+|币种对ID(Product\_id)|币对(Symbol)|最小交易单位(min_trade_size)|下单精度(quote_increment)|
 |:---:|:---:|:---:|:---:|
 |10|bch_btc|0.001|0.00000001|
 |12|ltc_btc|0.001|0.00000001|
