@@ -36,6 +36,8 @@ REST API Error Code
 |20030	|Account still has debts|
 |20038	|Due to regulation, this function is not availavle in the country/region your currently reside in.|
 |20049|	Request frequency too high|
+|21020	|	Contracts are being delivered, orders cannot be placed|
+|21021	|	 Contracts are being settled, contracts cannot be placed|
 |HTTP ERROR CODE 403|	Too many requests, IP is shielded.|
 |Request Timed Out	|Too many requests, IP is shielded|
 
