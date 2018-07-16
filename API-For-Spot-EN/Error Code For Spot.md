@@ -54,6 +54,7 @@ REST API Error Code
 |10101|	order type is wrong|
 |10102|	incorrect ID|
 |10103|	the private otc order's key incorrect|
+|10106|	API key domain not matched|
 |10216|	Non-available API|
 |1002|	The transaction amount exceed the balance|
 |1003|	The transaction amount is less than the minimum requirement|
