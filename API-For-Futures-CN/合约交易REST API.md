@@ -507,7 +507,7 @@ result ： true代表成功返回
 |api_key|String|是|用户申请的apiKey|
 |sign|String|是|请求参数的签名|
 |price|String|是|价格|
-|amount|String|是|委托数量|
+|amount|String|是|委托数量（张）|
 |type|String|是|1:开多 2:开空 3:平多 4:平空|
 |match_price|String|否|是否为对手价 0:不是    1:是   ,当取值为1时,price无效|
 |lever_rate|String|否|杠杆倍数，下单时无需传送，系统取用户在页面上设置的杠杆倍数。且“开仓”若有10倍多单，就不能再下20倍多单|
