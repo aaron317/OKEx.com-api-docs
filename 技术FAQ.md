@@ -9,7 +9,7 @@
 答：请检查接口所需参数是否正确无误提交给服务器，然后检查请求头信息content-type是否被设置成'application/x-www-form-urlencoded'
 
 3. 服务器返回10006错误码    
-答：请检查请求域名，OKEx用户请访问[www.okex.com](www.okex.com)，国际站用户请访问[www.okcoin.com](www.okcoin.com)。      
+答：请检查请求域名，OKEx用户请访问[www.okex.com](www.okex.com) 国际站用户请访问[www.okcoin.com](www.okcoin.com)      
     
 ## WebSocket API    
 
@@ -23,12 +23,12 @@
  答：个人中心——>我的API——>创建API（勾选权限）
 
 2. 申请的国际站APIKEY能在OKEx使用么？
- 答：不能，国际站申请的APIKEY 只适用于https://www.okcoin.com，OKEx站申请的APIKEY 仅适用于 https://www.okex.com 
+ 答：不能，国际站申请的APIKEY 只适用于https://www.okcoin.com OKEx站申请的APIKEY 仅适用于 https://www.okex.com 
  
 3. API有示例demo么？  
  答：有，请访问https://github.com/okcoin-okex/API-docs-OKEx.com/blob/master/%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B.md
  
-4. okex的wss://real.okex.com:10440/websocket/okexapi地址调不通？  
+4. okex的wss://real.okex.com:10440/websocket/okexapi 地址调不通？  
  答：国内用户使用香港阿里云服务器或者国外服务器
  
 5. 有测试环境提供给使用者吗？
@@ -43,7 +43,7 @@
 8. 有没有获取所有币种对的API接口？  
  答：https://www.okex.com/v1/tickers.do
  
-9. https://www.okex.com/api/v1/userinfo.do和https://www.okex.com/api/v1/wallet_info.do的区别？  
+9. https://www.okex.com/api/v1/userinfo.do 和 https://www.okex.com/api/v1/wallet_info.do 的区别？  
  答：userinfo 是现货账户信息，wallet_info是钱包账户信息。
  
 10. 合约下单的时候报错“20007”？  
