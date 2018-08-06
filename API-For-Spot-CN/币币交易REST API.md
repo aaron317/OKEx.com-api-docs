@@ -112,7 +112,7 @@ bids :买方深度
 |symbol|String|是|币对如ltc_btc|
 |size|Integer|否(默认200)|value: 1-200|
 
-3. Get /api/v1/trades   获取OKEx币币交易信息(600条)
+3. Get /api/v1/trades   获取OKEx币币交易信息(60条)
 
 URL `https://www.okex.com/api/v1/trades.do`	
 
@@ -166,7 +166,7 @@ type: buy/sell
 |参数名|	参数类型|	必填|	描述|
 | :-----    | :-----   | :-----    | :-----   |
 |symbol|String|是|币对如ltc_btc|
-|since|Long|否(默认返回最近成交600条)|tid:交易记录ID(返回数据不包括当前tid值,最多返回600条数据)|
+|since|Long|否(默认返回最近成交60条)|tid:交易记录ID(返回数据不包括当前tid值,最多返回60条数据)|
 
 4. Get /api/v1/kline    获取OKEx币币K线数据(每个周期数据条数2000左右)
 
