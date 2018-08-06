@@ -116,7 +116,7 @@ Request Parameters
 |symbol|Pairs like : ltc\_btc  etc\_btc|
 |size|value: must be between 1 - 200|
 
-3. Get /api/v1/trades   Get Trade Recently 600
+3. Get /api/v1/trades   Get Trade Recently 60
 
 URL `https://www.okex.com/api/v1/trades.do`	
 
@@ -170,7 +170,7 @@ Request Parameters
 |Parameter|		Description|
 | :-----     | :-----   |
 |symbol|Pairs like : ltc\_btc  etc\_btc|
-|since|get recently 600 pieces of data starting from the given tid (optional)|
+|since|get recently 60 pieces of data starting from the given tid (optional)|
 
 4. Get /api/v1/kline    Get Candlestick Data
 
