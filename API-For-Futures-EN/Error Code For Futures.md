@@ -38,6 +38,9 @@ REST API Error Code
 |20049|	Request frequency too high|
 |21020	|	Contracts are being delivered, orders cannot be placed|
 |21021	|	 Contracts are being settled, contracts cannot be placed|
+|21023	|	 Current Holding Pos Exceeds the Max Allowed Limit (Cross Margin)|
+|21024	|	 Current Holding Pos Exceeds the Max Allowed Limit (Fixed Margin)|
+|21025	|	 Margin Ratio is lower than Min. Margin Requirment Upon Order Submission|
 |HTTP ERROR CODE 403|	Too many requests, IP is shielded.|
 |Request Timed Out	|Too many requests, IP is shielded|
 
