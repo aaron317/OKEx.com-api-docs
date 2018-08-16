@@ -35,12 +35,13 @@ REST API Error Code
 |20029	|Amount is large than available funds|
 |20030	|Account still has debts|
 |20038	|Due to regulation, this function is not availavle in the country/region your currently reside in.|
-|20049|	Request frequency too high|
+|20049  |	Request frequency too high|
 |21020	|	Contracts are being delivered, orders cannot be placed|
 |21021	|	 Contracts are being settled, contracts cannot be placed|
 |21023	|	 Current Holding Pos Exceeds the Max Allowed Limit (Cross Margin)|
 |21024	|	 Current Holding Pos Exceeds the Max Allowed Limit (Fixed Margin)|
 |21025	|	 Margin Ratio is lower than Min. Margin Requirment Upon Order Submission|
+|21026	|	 Your account has been restricted from opening more positions|
 |HTTP ERROR CODE 403|	Too many requests, IP is shielded.|
 |Request Timed Out	|Too many requests, IP is shielded|
 
