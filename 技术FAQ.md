@@ -41,7 +41,7 @@
  答：首先比较所有参数名的第一个字母，按abcd顺序排列，若遇到相同首字母，则看第二个字母，以此类推
  
 8. 有没有获取所有币种对的API接口？  
- 答：https://www.okex.com/v1/tickers.do
+ 答：https://www.okex.com/api/v1/tickers.do
  
 9. https://www.okex.com/api/v1/userinfo.do 和 https://www.okex.com/api/v1/wallet_info.do 的区别？  
  答：userinfo 是现货账户信息，wallet_info是钱包账户信息。
