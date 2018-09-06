@@ -220,7 +220,7 @@ Request Parameters
 |Parameter|	Description|
 | :-----    | :-----   |
 |symbol|Pairs like : ltc\_btc  etc\_btc|
-|type|1min/3min/5min/15min/30min/1day/3day/1week/1hour/2hour/4hour/6hour/12hour|
+|type|1min/3min/5min/15min/30min/1day/1week/1hour/2hour/4hour/6hour/12hour|
 |size|specify data size to be acquired|
 |since|timestamp(eg:1417536000000). data after the timestamp will be returned|
 
