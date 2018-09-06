@@ -216,7 +216,7 @@ GET https://www.okex.com/api/v1/kline.do?symbol=ltc_btc&type=1min
 |参数名|	参数类型|	必填|	描述|
 | :-----    | :-----   | :-----    | :-----   |
 |symbol|String|是|币对如ltc_btc|
-|type|String|是|1min/3min/5min/15min/30min/1day/3day/1week/1hour/2hour/4hour/6hour/12hour|
+|type|String|是|1min/3min/5min/15min/30min/1day/1week/1hour/2hour/4hour/6hour/12hour|
 |size|Integer|否(默认全部获取)|指定获取数据的条数|
 |since|Long|否(默认全部获取)|时间戳，返回该时间戳以后的数据(例如1417536000000)|
 
