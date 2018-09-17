@@ -363,7 +363,7 @@ low :最低卖价
 
 1. POST /api/v1/future_userinfo   获取OKEx合约账户信息(全仓)
 
-URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率 10次/2秒  
+URL `https://www.okex.com/api/v1/future_userinfo.do`  访问频率 5次/2秒  
 
 示例	
 
@@ -477,7 +477,7 @@ force_liqu_price:预估爆仓价
 
 3. POST /api/v1/future_trade   合约下单
 
-URL `https://www.okex.com/api/v1/future_trade.do`  访问频率 5次/1秒(按币种单独计算) 	
+URL `https://www.okex.com/api/v1/future_trade.do`  访问频率 20次/2秒(按币种单独计算)
 
 示例	
 
@@ -514,7 +514,7 @@ result ： true代表成功返回
 
 4. POST /api/v1/future_trades_history    获取OKEX合约交易历史（非个人）访问频率 
 
-URL `https://www.okex.com/api/v1/future_trades_history`   访问频率 2次/2秒 
+URL `https://www.okex.com/api/v1/future_trades_history`   访问频率 1次/120秒
 
 示例	
 
@@ -562,7 +562,7 @@ type：交易类型（buy/sell）
 
 5. POST /api/v1/future\_batch_trade   批量下单
 
-URL `https://www.okex.com/api/v1/future_batch_trade.do`  访问频率 3次/1秒 最多一次下1-5个订单（按币种单独计算）	
+URL `https://www.okex.com/api/v1/future_batch_trade.do`  访问频率 10次/2秒 最多一次下1-5个订单（按币种单独计算）
 
 示例	
 
@@ -605,7 +605,7 @@ order_id:订单ID
 
 6. POST /api/v1/future_cancel   取消合约订单
 
-URL `https://www.okex.com/api/v1/future_cancel.do`  访问频率 2次/1秒，最多一次撤1-5个订单（按币种单独计算） 	
+URL `https://www.okex.com/api/v1/future_cancel.do`  访问频率 10次/2秒，最多一次撤1-5个订单（按币种单独计算） 	
 
 示例	
 
@@ -644,9 +644,9 @@ error:失败的订单ID后跟失败错误码(用户多笔订单)
 |sign|String|是|请求参数的签名|
 |contract\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 
-7. POST /api/v1/future\_order\_info   获取合约订单信息
+7. POST /api/v1/future\_order\_info   获取合约订单信息    
 
-URL `https://www.okex.com/api/v1/future_order_info.do`  	
+URL `https://www.okex.com/api/v1/future_order_info.do`  访问频率 10次/2秒	
 
 示例	
 
@@ -710,7 +710,7 @@ lever_rate: 杠杆倍数  value:10\20  默认10
 
 8. POST /api/v1/future\_orders\_info   批量获取合约订单信息
 
-URL `https://www.okex.com/api/v1/future_orders_info.do`  
+URL `https://www.okex.com/api/v1/future_orders_info.do`  访问频率 10次/2秒
 
 
 示例	
@@ -799,9 +799,9 @@ lever_rate: 杠杆倍数  value:10\20  默认10
 |sign|String|是|请求参数的签名|
 |order_id|String|是|订单ID(多个订单ID中间以","分隔,一次最多允许查询50个订单)|
 
-9. POST /api/v1/future\_userinfo\_4fix   获取逐仓合约账户信息
+9. POST /api/v1/future\_userinfo\_4fix   获取逐仓合约账户信息   
 
-URL `https://www.okex.com/api/v1/future_userinfo_4fix.do`  
+URL `https://www.okex.com/api/v1/future_userinfo_4fix.do`  访问频率 5次/2秒
 
 示例	
 
