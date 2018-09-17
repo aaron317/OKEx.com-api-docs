@@ -367,6 +367,7 @@ Contract Trading API for placing contract orders on OKEX
 1. POST /api/v1/future_userinfo   Get OKEX Contract Account Info（Cross-Margin Mode）
 
 URL `https://www.okex.com/api/v1/future_userinfo.do`	
+Request frequency 5 times/2s
 
 Example	
 
@@ -416,6 +417,7 @@ Request Parameters
 2. POST /api/v1/future_position   Get User Contract Positions （Cross-Margin Mode）
 
 URL `https://www.okex.com/api/v1/future_position.do`	
+Request frequency 10 times/2s
 
 Example	
 
@@ -481,7 +483,7 @@ Request Parameters
 3. POST /api/v1/future_trade   Place Orders
 
 URL `https://www.okex.com/api/v1/future_trade.do`  
-Request frequency 5 times/s(each coin has 5 times)	
+Request frequency 20 times/2s(each coin has 5 times)	
 
 Example	
 
@@ -519,6 +521,7 @@ Request Parameters
 4. POST /api/v1/future_trades_history    Get OKEX Contract Trade History (Not for Personal)
 
 URL `https://www.okex.com/api/v1/future_trades_history` 
+Request frequency 1 times/120s
 
 Example	
 
@@ -567,7 +570,7 @@ Request Parameters
 5. POST /api/v1/future\_batch_trade   Batch Trade
 
 URL `https://www.okex.com/api/v1/future_batch_trade.do`  
-Request frequency 3 times/s  (each coin has 3 times).you can place 5 orders at monst once	
+Request frequency 10 times/2s  (each coin has 5 times).you can place 5 orders at monst once	
 
 Example	
 
@@ -611,7 +614,7 @@ Request Parameters
 6. POST /api/v1/future_cancel   Cancel Orders
 
 URL `https://www.okex.com/api/v1/future_cancel.do`  
-Request frequency 2 times/s  (each coin has 2 times).you can cancel 5 orders at monst once	
+Request frequency 10 times/2s  (each coin has 2 times).you can cancel 5 orders at monst once	
 
 Example	
 
@@ -644,7 +647,8 @@ Request Parameters
 
 7. POST /api/v1/future\_order\_info   Get User Contract Order
 
-URL `https://www.okex.com/api/v1/future_order_info.do`  	
+URL `https://www.okex.com/api/v1/future_order_info.do`  
+Request frequency 10 times/2s
 
 Example	
 
@@ -708,10 +712,8 @@ Request Parameters
 
 8. POST /api/v1/future\_orders\_info   Get User Contract Order in 
 
-
-
-URL `https://www.okex.com/api/v1/future_orders_info.do`  
-
+URL `https://www.okex.com/api/v1/future_orders_info.do`
+Request frequency 10 times/2s
 
 Example	
 
@@ -802,7 +804,7 @@ Request Parameters
 9. POST /api/v1/future\_userinfo\_4fix   Get User Account Info (Fixed-Margin Mode)
 
 URL `https://www.okex.com/api/v1/future_userinfo_4fix.do`  
-
+Request frequency 5 times/2s
 
 Example	
 
@@ -870,6 +872,8 @@ Request Parameters
 10. POST /api/v1/future\_position\_4fix   Get User Positions (Fixed-Margin Mode)
 
 URL `https://www.okex.com/api/v1/future_position_4fix.do`  
+Request frequency 10 times/2s
+
 Example	
 
 ```
