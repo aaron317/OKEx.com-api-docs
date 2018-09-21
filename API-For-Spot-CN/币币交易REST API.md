@@ -422,7 +422,7 @@ deal_amount:成交数量
 order_id:订单ID
 orders_id:订单ID(不建议使用)
 price:委托价格
-status:-1:已撤销  0:未成交  1:部分成交  2:完全成交 3:撤单处理中
+status:-1:已撤销  0:未成交  1:部分成交  2:完全成交 3:撤单处理中 4:下单失败 5:下单中
 type:buy_market:市价买入 / sell_market:市价卖出
 ```
 
