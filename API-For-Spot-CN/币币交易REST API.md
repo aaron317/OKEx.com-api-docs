@@ -481,7 +481,7 @@ avg_price：平均成交价
 create_date：委托时间
 order_id：订单ID
 price：限价单请求：委托价格 / 市价单请求：买入的usd金额
-status： -1：已撤销  0：未成交 1：部分成交 2：完全成交 4:撤单处理中
+status:-1:已撤销  0:未成交  1:部分成交  2:完全成交 3:撤单处理中 4:下单失败 5:下单中
 type:buy_market：市价买入 /sell_market：市价卖出
 result：结果信息
 ```
