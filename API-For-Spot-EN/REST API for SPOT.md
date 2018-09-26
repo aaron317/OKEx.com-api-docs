@@ -430,7 +430,7 @@ deal_amount: filled quantity
 order_id: order ID
 orders_id: order ID (Deprecated)
 price: order price
-status: -1 = cancelled, 0 = unfilled, 1 = partially filled, 2 = fully filled, 3 = cancel request in process
+status: -1 = cancelled, 0 = unfilled, 1 = partially filled, 2 = fully filled, 3 = cancel request in process, 4 = order Failed, 5 = order placing
 type: buy_market = market buy order, sell_market = market sell order
 ```
 
@@ -490,7 +490,7 @@ avg_price: average transaction price
 create_date: order time
 order_id: order ID
 price: for limit orders, return the order price.  For market orders, returns the filled price
-status: -1 = cancelled, 0 = unfilled, 1 = partially filled, 2 = fully filled, 4 = cancel request in process
+status: -1 = cancelled, 0 = unfilled, 1 = partially filled, 2 = fully filled, 3 = cancel request in process, 4 = order Failed, 5 = order placing
 type: buy_market = market buy order, sell_market = market sell order
 result: request result
 ```
