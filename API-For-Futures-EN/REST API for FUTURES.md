@@ -33,7 +33,7 @@ Contract Price API Receive the latest OKEX contract data
 
 1. Get /api/v1/future_ticker    Get OKEX Contract Price
 
-URL `https://www.okex.com/api/v1/future_ticker.do`	
+URL `https://www.okex.com/api/v1/future_ticker.do`	Request frequency 20 times/2s
 
 Example	
 
@@ -78,7 +78,7 @@ Request Parameters
 
 2. Get /api/v1/future_depth   Get OKEX Contract Market Depth
 
-URL `https://www.okex.com/api/v1/future_depth.do`	
+URL `https://www.okex.com/api/v1/future_depth.do`	Request frequency 20 times/2s
 
 Example
 
@@ -122,7 +122,7 @@ Request Parameters
 
 3. Get /api/v1/future_trades   Get Contract Trade History
 
-URL `https://www.okex.com/api/v1/future_trades.do`	
+URL `https://www.okex.com/api/v1/future_trades.do`	Request frequency 20 times/2s
 
 Example	
 
@@ -172,7 +172,7 @@ Request Parameters
 
  4. Get /api/v1/future_index    Get OKEX Contract Index Price
 
-URL `https://www.okex.com/api/v1/future_index.do`	
+URL `https://www.okex.com/api/v1/future_index.do`	Request frequency 20 times/2s
 
 Example	
 
@@ -197,7 +197,7 @@ Request Parameters
 
 5. Get /api/v1/exchange_rate   Get USD-CNY Exchange Rate
 
-URL `https://www.okex.com/api/v1/exchange_rate.do`	
+URL `https://www.okex.com/api/v1/exchange_rate.do`	Request frequency 20 times/2s
 
 Example	
 
@@ -221,7 +221,7 @@ none
 
 6. Get /api/v1/future_estimated_price   Get Estimated Delivery Price
 
-URL `https://www.okex.com/api/v1/future_estimated_price.do`	
+URL `https://www.okex.com/api/v1/future_estimated_price.do`	Request frequency 20 times/2s
 
 Example	
 
@@ -247,7 +247,7 @@ Request Parameters
 
 7. Get /api/v1/future_kline   Get Contract Candlestick Data
 
-URL `https://www.okex.com/api/v1/future_kline.do`	
+URL `https://www.okex.com/api/v1/future_kline.do`	Request frequency 20 times/2s
 
 Example	
 
@@ -303,7 +303,7 @@ Request Parameters
 
 8. Get /api/v1/future_hold_amount   Get Total Number Of Current Holding (cont)
 
-URL `https://www.okex.com/api/v1/future_hold_amount.do`	
+URL `https://www.okex.com/api/v1/future_hold_amount.do`	  Request frequency 20 times/2s
 
 Example	
 
@@ -335,7 +335,7 @@ Request Parameters
 
 9. Get /api/v1/future_price_limit   Get upper and lower price limit
 
-URL `https://www.okex.com/api/v1/future_price_limit.do`	
+URL `https://www.okex.com/api/v1/future_price_limit.do`	   Request frequency 20 times/2s
 
 Example	
 
@@ -521,7 +521,7 @@ Request Parameters
 4. POST /api/v1/future_trades_history    Get OKEX Contract Trade History (Not for Personal)
 
 URL `https://www.okex.com/api/v1/future_trades_history` 
-Request frequency 1 times/120s
+Request frequency 1 times/30s
 
 Example	
 
@@ -648,7 +648,7 @@ Request Parameters
 7. POST /api/v1/future\_order\_info   Get User Contract Order
 
 URL `https://www.okex.com/api/v1/future_order_info.do`  
-Request frequency 10 times/2s
+Request frequency 20 times/2s
 
 Example	
 
@@ -713,7 +713,7 @@ Request Parameters
 8. POST /api/v1/future\_orders\_info   Get User Contract Order in 
 
 URL `https://www.okex.com/api/v1/future_orders_info.do`
-Request frequency 10 times/2s
+Request frequency 20 times/2s
 
 Example	
 
@@ -947,6 +947,7 @@ Request Parameters
 11. POST /api/v1/future_explosive   Get Forced Liquidation Orders
 
 URL `https://www.okex.com/api/v1/future_explosive.do` 
+Request frequency 10 times/2s
 
 Example	
 
@@ -1024,6 +1025,7 @@ Request Parameters
 12. POST /api/v1/future_devolve   Account Fund Transfer
 
 URL `https://www.okex.com/api/v1/future_devolve.do`  	
+Request frequency 10 times/2s
 
 Example	
 
