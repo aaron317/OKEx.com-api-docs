@@ -43,6 +43,7 @@ REST API Error Code
 |21024	|Current Holding Pos Exceeds the Max Allowed Limit (Fixed Margin)|
 |21025	|Margin Ratio is lower than Min. Margin Requirment Upon Order Submission|
 |21026	|Your account has been restricted from opening more positions|
+|20119	|The api is offline or unavailable|
 |HTTP ERROR CODE 403|	Too many requests, IP is shielded.|
 |Request Timed Out	|Too many requests, IP is shielded|
 
