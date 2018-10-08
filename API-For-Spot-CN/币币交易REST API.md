@@ -29,7 +29,7 @@ REST访问的根URL：`https://www.okex.com/api/v1`    
 
 1. Get /api/v1/ticker    获取OKEx币币行情
 
-URL `https://www.okex.com/api/v1/ticker.do`	
+URL `https://www.okex.com/api/v1/ticker.do`	访问频率 20次/2秒
 
 示例	
 
@@ -70,7 +70,7 @@ vol: 成交量(最近的24小时)
 
 2. Get /api/v1/depth   获取OKEx币币市场深度
 
-URL `https://www.okex.com/api/v1/depth.do`	
+URL `https://www.okex.com/api/v1/depth.do`	访问频率 20次/2秒
 
 示例	
 
@@ -114,7 +114,7 @@ bids :买方深度
 
 3. Get /api/v1/trades   获取OKEx币币交易信息(60条)
 
-URL `https://www.okex.com/api/v1/trades.do`	
+URL `https://www.okex.com/api/v1/trades.do`	访问频率 20次/2秒
 
 示例	
 
@@ -170,7 +170,7 @@ type: buy/sell
 
 4. Get /api/v1/kline    获取OKEx币币K线数据(每个周期数据条数2000左右)
 
-URL `https://www.okex.com/api/v1/kline.do`	
+URL `https://www.okex.com/api/v1/kline.do`	访问频率 20次/2秒
 
 示例	
 
