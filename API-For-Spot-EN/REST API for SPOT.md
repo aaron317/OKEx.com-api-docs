@@ -33,7 +33,8 @@ Receive the latest OKEx spot market data
 
 1. Get /api/v1/ticker    Get Price Ticker
 
-URL `https://www.okex.com/api/v1/ticker.do`	
+URL `https://www.okex.com/api/v1/ticker.do`
+Request frequency 20 times/2s
 
 Example	
 
@@ -74,7 +75,8 @@ Request Parameters
 
 2. Get /api/v1/depth   Get Market Depth
 
-URL `https://www.okex.com/api/v1/depth.do`	
+URL `https://www.okex.com/api/v1/depth.do`
+Request frequency 20 times/2s
 
 Example	
 
@@ -119,6 +121,7 @@ Request Parameters
 3. Get /api/v1/trades   Get Trade Recently 60
 
 URL `https://www.okex.com/api/v1/trades.do`	
+Request frequency 20 times/2s
 
 Example	
 
@@ -174,7 +177,8 @@ Request Parameters
 
 4. Get /api/v1/kline    Get Candlestick Data
 
-URL `https://www.okex.com/api/v1/kline.do`	
+URL `https://www.okex.com/api/v1/kline.do`
+Request frequency 20 times/2s
 
 Example	
 
