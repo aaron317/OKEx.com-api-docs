@@ -37,7 +37,13 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
 - 客户端和服务器皆可以主动地发送数据给对方；    
 - 不需要多次创建TCP请求和销毁，节约宽带和服务器的资源。    
 
-强烈建议开发者使用WebSocket API获取市场行情和买卖深度等信息。。    
+强烈建议开发者使用WebSocket API获取市场行情和买卖深度等信息。  
+
+
+WebSocket API 所有返回数据都进行了 GZIP 压缩，需要用户将接收到的数据进行解压，请根据自身情况选用合适的解压缩技术。
+获取压缩数据方式：请求地址添加参数compress=true，后期会忽略compress参数直接返回压缩数据    
+-  压缩数据： wss://real.okex.com:10441/websocket?compress=true;    
+-  非压缩数据：wss://real.okex.com:10441/websocket ；    
 
 ## 开启API权限    
 
