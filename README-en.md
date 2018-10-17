@@ -43,6 +43,8 @@ All the messages returning from WebSocket API will be optimized by GZIP compress
 - Compressed message: wss://real.okex.com:10441/websocket?compress=true;wss://real.okex.com:10440/websocket?compress=true;
 - Uncompressed message: wss://real.okex.com:10441/websocket ;wss://real.okex.com:10440/websocket；
 
+Please refer to our [demo](/demo)
+
 
 ## Open API Permissions
 
