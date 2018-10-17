@@ -40,8 +40,9 @@ WebSocket is a new protocol for HTML5. It implements full-duplex communication b
 Developers are strongly advised to use the WebSocket API to obtain information such as market conditions and trading depth.
 
 All the messages returning from WebSocket API will be optimized by Deflate compression. All users will be required to decompress the messages by themselves with the methods they find most appropriate.Method of getting compressed messages: add parameter "compress=true" to request URL. Our system will eventually ignore the "compress" parameter and return the compressed message directly.
-- Compressed message: wss://real.okex.com:10441/websocket?compress=true;wss://real.okex.com:10440/websocket?compress=true;
-- Uncompressed message: wss://real.okex.com:10441/websocket ;wss://real.okex.com:10440/websocket；
+- Compressed message: wss://real.okex.com:10441/websocket?compress=true;
+                     wss://real.okex.com:10440/websocket/okexapi ?compress=true;
+- Uncompressed message: wss://real.okex.com:10441/websocket ;wss://real.okex.com:10440/websocket/okexapi；
 
 Please refer to our [demo](/demo)
 
