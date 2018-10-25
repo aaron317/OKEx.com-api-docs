@@ -1,3 +1,124 @@
+ 
+### GO
+``` GO
+package main
+
+import (
+	"compress/flate"
+	"bytes"
+	"github.com/gorilla/websocket"
+	"io/ioutil"
+	
+	"log"
+	"net/url"
+
+
+)
+
+func main() {
+	u := url.URL{Scheme: "wss", Host: "real.okex.com:10441", Path: "/websocket", RawQuery: "compress=true"}
+	log.Printf("connecting to %s", u.String())
+
+	c, _, err := websocket.DefaultDialer.Dial(u.String(), nil)
+	if err != nil {
+		log.Fatal("dial:", err)
+	}
+	defer c.Close()
+
+	c.WriteMessage(websocket.TextMessage, []byte(`{"channel":"ok_sub_futureusd_btc_depth_quarter","event":"addChannel"}`))
+
+	done := make(chan struct{})
+
+	go func() {
+		defer close(done)
+		for {
+			messageType, message, err := c.ReadMessage()
+			switch messageType {
+			case websocket.TextMessage:
+				// no need uncompressed
+				log.Printf("recv: %s", message)
+			case websocket.BinaryMessage:
+				// uncompressed
+				text, err := GzipDecode(message)
+				if err != nil {
+					log.Println("err" , err)
+				} else {
+					log.Printf("recv: %s", text)
+				}
+			}
+			if err != nil {
+				log.Println("read:", err)
+				return
+			}
+
+		}
+	}()
+
+	select {}
+
+}
+
+func GzipDecode(in []byte) ([]byte, error) {
+	reader := flate.NewReader(bytes.NewReader(in))
+	defer reader.Close()
+
+	return ioutil.ReadAll(reader)
+
+}
+
+
+
+```
+### C++
+``` C++
+int gzdecompress(Byte *zdata, uLong nzdata, Byte *data, uLong *ndata)
+{
+    int err = 0;
+    z_stream d_stream = {0}; /* decompression stream */
+
+    static char dummy_head[2] = {
+        0x8 + 0x7 * 0x10,
+        (((0x8 + 0x7 * 0x10) * 0x100 + 30) / 31 * 31) & 0xFF,
+    };
+
+    d_stream.zalloc = NULL;
+    d_stream.zfree = NULL;
+    d_stream.opaque = NULL;
+    d_stream.next_in = zdata;
+    d_stream.avail_in = 0;
+    d_stream.next_out = data;
+
+    
+    if (inflateInit2(&d_stream, -MAX_WBITS) != Z_OK) {
+        return -1;
+    }
+
+    // if(inflateInit2(&d_stream, 47) != Z_OK) return -1;
+
+    while (d_stream.total_out < *ndata && d_stream.total_in < nzdata) {
+        d_stream.avail_in = d_stream.avail_out = 1; /* force small buffers */
+        if((err = inflate(&d_stream, Z_NO_FLUSH)) == Z_STREAM_END)
+        break;
+
+        if (err != Z_OK) {
+            if (err == Z_DATA_ERROR) {
+                d_stream.next_in = (Bytef*) dummy_head;
+                d_stream.avail_in = sizeof(dummy_head);
+                if((err = inflate(&d_stream, Z_NO_FLUSH)) != Z_OK) {
+                    return -1;
+                }
+            } else {
+                return -1;
+            }
+        }
+    }
+
+    if (inflateEnd(&d_stream)!= Z_OK)
+        return -1;
+    *ndata = d_stream.total_out;
+    return 0;
+}
+```
 ### C#
 
 ```C#
