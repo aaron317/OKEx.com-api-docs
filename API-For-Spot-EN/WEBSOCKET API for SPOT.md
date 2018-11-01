@@ -14,7 +14,7 @@ Should you have any questions, feel free to contact our support team.
 
 ## Request Process
 
-OKEx Spot WebSocket URL：`wss://real.okex.com:10441/websocket`  
+OKEx Spot WebSocket URL：`wss://real.okex.com:10440/ws/v1`  
 
 ### Send Request
 
