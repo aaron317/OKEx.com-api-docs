@@ -13,7 +13,7 @@ Should you have any questions, feel free to contact our support team.
     
 ## Request Process    
 
-OKEx Contract WebSocket URL：`wss://real.okex.com:10440/websocket/okexapi`         
+OKEx Contract WebSocket URL：`wss://real.okex.com:10440/ws/v1`         
 	
 #### Send Request    
 Request Data Format: 
