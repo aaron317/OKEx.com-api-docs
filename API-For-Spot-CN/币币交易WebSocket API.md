@@ -11,7 +11,7 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
     
 ## 请求交互    
 
-**币币交易**WebSocket服务连接地址：`wss://real.okex.com:10441/websocket`         
+**币币交易**WebSocket服务连接地址：`wss://real.okex.com:10440/ws/v1`         
 
 访问时需要科学上网
 	
