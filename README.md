@@ -41,10 +41,7 @@ WebSocket是HTML5一种新的协议(Protocol)。它实现了客户端与服务�
 
 
 WebSocket API 所有返回数据都进行了 Deflate 压缩，需要用户将接收到的数据进行解压，请根据自身情况选用合适的解压缩技术。
-获取压缩数据方式：请求地址添加参数compress=true，后期会忽略compress参数直接返回压缩数据 ，例如   
--  压缩数据： 现货和合约：wss://real.okex.com:10440/ws/v1?compress=true;           
--  非压缩数据：现货和合约：wss://real.okex.com:10440/ws/v1；
-
+          
 请参考我们的[demo](/demo)
 
 
