@@ -281,16 +281,16 @@ Example
                 "999.49",
                 "2.0",
                 "15:25:03",
-                "ask",
-                "0.2001"
+                "ask"
+                
             ],
             [
                 "732916899",
                 "999.49",
                 "2.0",
                 "15:25:04",
-                "ask",
-                "0.2001"
+                "ask"
+                
             ]
         "channel": "ok_sub_futureusd_btc_trade_this_week"
     }
@@ -300,8 +300,8 @@ Example
 Returned Value Description	
 
 ```
-[tid, price, amount, time, type,amountbtc]
-[string, string, string, string, string, string,string]
+[tid, price, amount, time, type]
+[string, string, string, string, string, string]
 ```
 
 6. ok\_sub\_futureusd\_X\_index   Subscribe Contract Index Price
