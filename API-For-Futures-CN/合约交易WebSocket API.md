@@ -263,24 +263,21 @@ bids(array):买单深度 数组索引(string) [价格, 量(张), 量(币),累计
                 "999.49",
                 "12.0",
                 "15:25:03",
-                "ask",
-                "1.2006"
+                "ask"
             ],
             [
                 "732916871",
                 "999.49",
                 "2.0",
                 "15:25:03",
-                "ask",
-                "0.2001"
+                "ask"
             ],
             [
                 "732916899",
                 "999.49",
                 "2.0",
                 "15:25:04",
-                "ask",
-                "0.2001"
+                "ask"
             ]
         "channel": "ok_sub_futureusd_btc_trade_this_week"
     }
@@ -290,8 +287,8 @@ bids(array):买单深度 数组索引(string) [价格, 量(张), 量(币),累计
 返回值说明	
 
 ```
-[交易序号, 价格, 成交量(张), 时间, 买卖类型，成交量(币-新增)]
-[string, string, string, string, string, string]
+[交易序号, 价格, 成交量(张), 时间, 买卖类型]
+[string, string, string, string, string]
 ```
 
 6. ok\_sub\_futureusd\_X\_index   订阅合约指数
