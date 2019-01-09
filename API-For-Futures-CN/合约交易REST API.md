@@ -1052,7 +1052,44 @@ result:划转结果。若是划转失败，将给出错误码提示。
 |type|String|是|划转类型。1：币币转合约 2：合约转币币|
 |amount|String|是| 划转币的数量|
 
+13. GET /api/v1/future_mark_price   获取合约标记价格
 
+URL `https://www.okex.com/api/v1/future_mark_price.do`  	 访问频率     秒
+
+示例	
+
+```
+# Request
+GET https://www.okex.com/api/v1/future_mark_price.do
+# Response
+{
+“symbol”: "BTC-USD",
+
+"contratct_type": "this_week",
+
+"mark_price": "7100.35",
+
+"timstamp": "1440308760000"
+
+}
+
+```
+
+返回值说明	
+
+```
+symbol：币种
+contratct_type：合约类型
+mark_price：标记价格
+timestamp：系统时间戳
+```
+
+请求参数	
+
+|参数名|	参数类型|	必填|	描述|
+| :-----    | :-----   | :-----    | :-----   |
+|symbol|String|是|btc\_usd   ltc\_usd    eth\_usd    etc\_usd    bch\_usd|
+|contratct\_type|String|是|合约类型: this\_week:当周   next\_week:下周   quarter:季度|
 
 
 
